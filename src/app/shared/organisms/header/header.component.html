@@ -1,9 +1,38 @@
-<header id="inicio" class="glass sticky top-0 z-50 flex items-center justify-between px-[6vw] py-4">
-  <app-logo></app-logo>
-  <nav class="hidden md:flex gap-8">
+<header id="inicio" class="glass sticky top-0 z-50 px-5 sm:px-[6vw] py-3.5 md:py-4">
+  <div class="flex items-center justify-between gap-3">
+    <app-logo></app-logo>
+
+    <nav class="hidden md:flex gap-8">
+      <app-nav-link href="#galeria" label="Galería"></app-nav-link>
+      <app-nav-link href="#catalogo" label="Catálogo"></app-nav-link>
+      <app-nav-link href="#nosotros" label="Nosotros"></app-nav-link>
+      <app-nav-link href="#contacto" label="Contacto"></app-nav-link>
+    </nav>
+
+    <div class="hidden md:block">
+      <app-button variant="primary" href="#contacto">Pedir ahora</app-button>
+    </div>
+
+    <button
+      (click)="toggleMenu()"
+      class="md:hidden flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full glass text-primary"
+      [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+    >
+      <lucide-icon [name]="menuOpen() ? 'x' : 'menu'" [size]="20"></lucide-icon>
+    </button>
+  </div>
+
+  <nav
+    *ngIf="menuOpen()"
+    class="md:hidden flex flex-col gap-1 mt-4 pt-4 border-t border-white/40 animate-fadeUp"
+    (click)="closeMenu()"
+  >
+    <app-nav-link href="#galeria" label="Galería"></app-nav-link>
     <app-nav-link href="#catalogo" label="Catálogo"></app-nav-link>
     <app-nav-link href="#nosotros" label="Nosotros"></app-nav-link>
     <app-nav-link href="#contacto" label="Contacto"></app-nav-link>
+    <div class="pt-2">
+      <app-button variant="primary" href="#contacto">Pedir ahora</app-button>
+    </div>
   </nav>
-  <app-button variant="primary" href="#contacto">Pedir ahora</app-button>
 </header>

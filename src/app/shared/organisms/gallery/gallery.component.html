@@ -1,13 +1,13 @@
-<section id="galeria" class="px-[6vw] py-24 max-w-7xl mx-auto">
+<section id="galeria" class="px-5 sm:px-[6vw] py-16 md:py-24 max-w-7xl mx-auto">
   <app-section-title eyebrow="Galería" title="Algunas de nuestras cajas"></app-section-title>
-  <div class="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
+  <div class="grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-3">
     <app-gallery-item
       *ngFor="let p of photos"
       [image]="p.image"
       [caption]="p.caption">
     </app-gallery-item>
   </div>
-  <p class="text-center text-textSoft text-sm mt-8 italic">
+  <p class="text-center text-textSoft text-xs sm:text-sm mt-6 md:mt-8 italic px-4">
     * Fotos de referencia mientras subimos las cajas reales que hemos entregado.
   </p>
 </section>

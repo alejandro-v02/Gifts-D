@@ -1,7 +1,9 @@
-<section id="contacto" class="px-[6vw] py-24 pb-28 max-w-3xl mx-auto text-center">
+<section id="contacto" class="px-5 sm:px-[6vw] py-16 md:py-24 md:pb-28 max-w-3xl mx-auto text-center">
   <app-section-title eyebrow="Contacto" title="Cuéntanos tu idea"></app-section-title>
-  <p class="text-textSoft mb-9">Escríbenos por el medio que prefieras y armamos tu caja perfecta.</p>
-  <div class="flex justify-center flex-wrap gap-4">
+  <p class="text-textSoft text-sm sm:text-base mb-8 md:mb-9 px-2">
+    Escríbenos por el medio que prefieras y armamos tu caja perfecta.
+  </p>
+  <div class="flex justify-center flex-wrap gap-3 sm:gap-4">
     <app-social-link
       *ngFor="let s of socials"
       [icon]="s.icon"

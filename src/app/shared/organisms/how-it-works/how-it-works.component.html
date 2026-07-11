@@ -1,6 +1,6 @@
-<section class="px-[6vw] py-24 max-w-6xl mx-auto">
+<section class="px-5 sm:px-[6vw] py-16 md:py-24 max-w-6xl mx-auto">
   <app-section-title eyebrow="Proceso" title="Cómo funciona"></app-section-title>
-  <div class="grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))] pt-4">
+  <div class="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pt-4">
     <app-step-item
       *ngFor="let s of steps; let i = index"
       [number]="i + 1"
