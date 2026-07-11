@@ -1,0 +1,12 @@
+<a
+[href]="href"
+  [target]="external ? '_blank' : null"
+  [rel]="external ? 'noopener' : null"
+  class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-semibold
+         transition-all duration-300 ease-out hover:-translate-y-1"
+  [ngClass]="variant === 'primary'
+    ? 'bg-primary text-white shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35'
+    : 'glass text-primary'"
+>
+  <ng-content></ng-content>
+</a>

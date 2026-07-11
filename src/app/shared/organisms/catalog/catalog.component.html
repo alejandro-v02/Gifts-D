@@ -1,0 +1,11 @@
+<section id="catalogo" class="px-[6vw] py-24 max-w-7xl mx-auto">
+  <app-section-title eyebrow="Catálogo" title="Cajas para cada ocasión"></app-section-title>
+  <div class="grid gap-7 [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]">
+    <app-product-card
+      *ngFor="let p of products"
+      [icon]="p.icon"
+      [title]="p.title"
+      [description]="p.description">
+    </app-product-card>
+  </div>
+</section>

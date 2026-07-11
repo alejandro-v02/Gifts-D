@@ -1,0 +1,11 @@
+<section id="nosotros" class="px-[6vw] py-24 max-w-5xl mx-auto">
+  <app-section-title eyebrow="Nosotros" title="Por qué elegir nuestras cajas"></app-section-title>
+  <div class="grid gap-10 [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]">
+    <app-feature-item
+      *ngFor="let i of items"
+      [icon]="i.icon"
+      [title]="i.title"
+      [text]="i.text">
+    </app-feature-item>
+  </div>
+</section>
