@@ -4,18 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: '#FBF6EF',
-        bgAlt: '#F3E7DD',
-        primary: '#3B1F2B',
-        primaryLight: '#6B3A4A',
-        gold: '#C9974D',
-        rose: '#D98C96',
-        text: '#2A1A20',
-        textSoft: '#6B5A5F',
+        bg: '#F7EFE1',
+        bgAlt: '#EDE0C8',
+        primary: '#5C3A21',
+        primaryLight: '#8B5E3C',
+        gold: '#C89566',
+        rose: '#A6373F',
+        text: '#3A2415',
+        textSoft: '#7A5C42',
       },
       fontFamily: {
-        display: ['Fraunces', 'serif'],
-        body: ['Sora', 'sans-serif'],
+        display: ['"Playfair Display"', 'serif'],
+        script: ['Caveat', 'cursive'],
+        body: ['Nunito', 'sans-serif'],
       },
       keyframes: {
         fadeUp: {
@@ -30,19 +31,11 @@ module.exports = {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
         },
-        fireflyRise: {
-          '0%':   { transform: 'translateY(0) translateX(0)', opacity: 0 },
-          '10%':  { opacity: 1 },
-          '50%':  { transform: 'translateY(-50vh) translateX(20px)', opacity: 0.8 },
-          '90%':  { opacity: 0.3 },
-          '100%': { transform: 'translateY(-105vh) translateX(-15px)', opacity: 0 },
-        },
       },
       animation: {
         fadeUp: 'fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) both',
         lidOpen: 'lidOpen 1.1s 0.2s cubic-bezier(0.22,1,0.36,1) forwards',
         glowIn: 'glowIn 0.9s 0.5s cubic-bezier(0.22,1,0.36,1) forwards',
-        fireflyRise: 'fireflyRise linear infinite',
       },
     },
   },

@@ -3,14 +3,14 @@
     <app-logo></app-logo>
 
     <nav class="hidden md:flex gap-8">
+      <app-nav-link href="#nosotros" label="Nosotros"></app-nav-link>
       <app-nav-link href="#galeria" label="Galería"></app-nav-link>
       <app-nav-link href="#catalogo" label="Catálogo"></app-nav-link>
-      <app-nav-link href="#nosotros" label="Nosotros"></app-nav-link>
       <app-nav-link href="#contacto" label="Contacto"></app-nav-link>
     </nav>
 
     <div class="hidden md:block">
-      <app-button variant="primary" href="#contacto">Pedir ahora</app-button>
+      <app-button variant="primary">Pedir ahora</app-button>
     </div>
 
     <button
@@ -27,12 +27,12 @@
     class="md:hidden flex flex-col gap-1 mt-4 pt-4 border-t border-white/40 animate-fadeUp"
     (click)="closeMenu()"
   >
+    <app-nav-link href="#nosotros" label="Nosotros"></app-nav-link>
     <app-nav-link href="#galeria" label="Galería"></app-nav-link>
     <app-nav-link href="#catalogo" label="Catálogo"></app-nav-link>
-    <app-nav-link href="#nosotros" label="Nosotros"></app-nav-link>
     <app-nav-link href="#contacto" label="Contacto"></app-nav-link>
     <div class="pt-2">
-      <app-button variant="primary" href="#contacto">Pedir ahora</app-button>
+      <app-button variant="primary">Pedir ahora</app-button>
     </div>
   </nav>
 </header>

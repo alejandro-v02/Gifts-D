@@ -1,13 +1,59 @@
 <section id="galeria" class="px-5 sm:px-[6vw] py-16 md:py-24 max-w-7xl mx-auto">
   <app-section-title eyebrow="Galería" title="Algunas de nuestras cajas"></app-section-title>
-  <div class="grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-3">
-    <app-gallery-item
-      *ngFor="let p of photos"
-      [image]="p.image"
-      [caption]="p.caption">
-    </app-gallery-item>
+
+  <div class="relative">
+
+    <!-- Track del carrusel -->
+    <div
+      id="gallery-track"
+      class="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4
+             [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+    >
+      <div
+        *ngFor="let p of photos; let i = index"
+        class="snap-center shrink-0 w-[78%] sm:w-[45%] lg:w-[31%] group relative rounded-3xl overflow-hidden
+               shadow-lg shadow-primary/15 aspect-square transition-transform duration-500"
+      >
+        <img [src]="p.image" [alt]="p.caption"
+             class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" />
+
+        <div class="absolute inset-0 flex items-end p-5
+                    bg-gradient-to-t from-primary/85 via-primary/10 to-transparent">
+          <span class="glass text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+            <lucide-icon name="gift" [size]="16"></lucide-icon>
+            {{ p.caption }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flechas (solo desktop/tablet) -->
+    <button type="button" (click)="prev()"
+      class="hidden sm:flex absolute top-1/2 -translate-y-1/2 -left-4 md:-left-6 z-10
+             w-11 h-11 rounded-full glass text-primary items-center justify-center shadow-lg">
+      <lucide-icon name="chevron-left" [size]="22"></lucide-icon>
+    </button>
+
+    <button type="button" (click)="next()"
+      class="hidden sm:flex absolute top-1/2 -translate-y-1/2 -right-4 md:-right-6 z-10
+             w-11 h-11 rounded-full glass text-primary items-center justify-center shadow-lg">
+      <lucide-icon name="chevron-right" [size]="22"></lucide-icon>
+    </button>
+
   </div>
+
+  <!-- Puntos indicadores -->
+  <div class="flex justify-center gap-2 mt-6">
+    <button
+      type="button"
+      *ngFor="let p of photos; let i = index"
+      (click)="goTo(i)"
+      class="h-2.5 rounded-full transition-all duration-300"
+      [ngClass]="activeIndex() === i ? 'w-7 bg-rose' : 'w-2.5 bg-primary/30'"
+    ></button>
+  </div>
+
   <p class="text-center text-textSoft text-xs sm:text-sm mt-6 md:mt-8 italic px-4">
-    * Fotos de referencia mientras subimos las cajas reales que hemos entregado.
+    Desliza para ver más de nuestros trabajos.
   </p>
 </section>

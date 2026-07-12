@@ -9,6 +9,5 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   @Input() variant: 'primary' | 'ghost' = 'primary';
-  @Input() href = '';
-  @Input() external = false; // true solo para links que salen del sitio (WhatsApp, redes, etc.)
+  @Input() href = ''; // guardado para cuando lo actives; hoy no navega
 }

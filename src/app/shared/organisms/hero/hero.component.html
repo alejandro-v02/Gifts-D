@@ -1,37 +1,25 @@
-<section class="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 px-5 sm:px-[6vw] pt-12 md:pt-20 pb-12 md:pb-16 max-w-7xl mx-auto">
+<section class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 px-5 sm:px-[6vw] pt-10 md:pt-20 pb-12 md:pb-16 max-w-7xl mx-auto">
 
-  <div class="w-full md:flex-1 animate-fadeUp text-center md:text-left">
-    <span class="text-gold font-bold tracking-[0.1em] uppercase text-[12px] sm:text-[13px]">
-      Cajas y detalles hechos a mano
+  <div class="order-1 md:order-2 w-full md:flex-1 glass rounded-[28px] p-2.5 shadow-xl shadow-primary/15 animate-fadeUp">
+    <img src="/taller-maestro.png" alt="El Taller del Maestro"
+         class="w-full rounded-[20px] object-cover" />
+  </div>
+
+  <div class="order-2 md:order-1 w-full md:flex-1 animate-fadeUp text-center md:text-left">
+    <span class="text-rose font-bold tracking-[0.1em] uppercase text-[12px] sm:text-[13px]">
+      Cajas de madera hechas a mano
     </span>
-    <h1 class="font-display text-[32px] sm:text-[40px] md:text-[58px] leading-[1.1] text-primary mt-3 mb-4 md:mb-5">
-      Cada regalo<br><em class="italic text-rose">merece su caja.</em>
+    <h1 class="font-display text-[30px] sm:text-[40px] md:text-[56px] leading-[1.1] text-primary mt-3 mb-4 md:mb-5">
+      Creamos, diseñamos<br>
+      y construimos <span class="font-script text-rose text-[36px] sm:text-[48px] md:text-[62px]">con amor</span>
     </h1>
     <p class="text-textSoft text-[15px] sm:text-[17px] max-w-[480px] mx-auto md:mx-0 leading-relaxed mb-7 md:mb-8">
-      Diseñamos cajas personalizadas para bodas, cumpleaños, aniversarios y esos detalles
+      Cajas de madera personalizadas para desayunos sorpresa, anchetas, regalos y detalles
       que quieres que se sientan especiales.
     </p>
     <div class="flex gap-4 flex-wrap justify-center md:justify-start">
-      <app-button variant="primary" href="#catalogo">Ver catálogo</app-button>
-      <app-button variant="ghost" href="#contacto">Cotizar mi caja</app-button>
-    </div>
-  </div>
-
-  <div class="w-full md:flex-1 flex justify-center [perspective:1200px]" aria-hidden="true">
-    <div class="relative w-[200px] h-[170px] sm:w-[240px] sm:h-[204px] md:w-[260px] md:h-[220px]">
-
-      <div class="absolute -inset-8 md:-inset-10 rounded-full blur-2xl opacity-0 animate-glowIn"
-           style="background: radial-gradient(circle, rgba(201,151,77,0.45), transparent 70%)"></div>
-
-      <div class="absolute bottom-0 w-full h-[108px] sm:h-[130px] md:h-[140px] rounded-xl shadow-2xl shadow-primary/35
-                  bg-gradient-to-br from-primaryLight to-primary"></div>
-
-      <div class="absolute top-8 sm:top-9 md:top-10 w-full h-[46px] sm:h-[56px] md:h-[60px] rounded-lg origin-top animate-lidOpen
-                  bg-gradient-to-br from-rose to-primaryLight"></div>
-
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[16px] sm:w-[19px] md:w-[22px] h-[108px] sm:h-[130px] md:h-[140px] bg-gold z-10"></div>
-      <div class="absolute top-8 sm:top-9 md:top-10 w-full h-[16px] sm:h-[19px] md:h-[22px] bg-gold z-10"></div>
-
+      <app-button variant="primary">Ver catálogo</app-button>
+      <app-button variant="ghost">Cotizar mi caja</app-button>
     </div>
   </div>
 

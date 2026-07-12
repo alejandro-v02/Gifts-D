@@ -11,5 +11,6 @@ import { LucideAngularModule } from 'lucide-angular';
 export class SocialLinkComponent {
   @Input() icon: string = 'message-circle';
   @Input() label = '';
-  @Input() href = '#';
+  @Input() href = ''; // guardado para activarlo después
+  @Input() badgeStyle = '';
 }

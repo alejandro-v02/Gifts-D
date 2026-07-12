@@ -11,8 +11,8 @@ import { ProductCardComponent } from '../../molecules/product-card/product-card.
 })
 export class CatalogComponent {
   products = [
-    { icon: 'heart', title: 'Cajas para bodas', description: 'Detalles para invitados con acabado en tela y listón dorado.' },
-    { icon: 'cake', title: 'Cajas de cumpleaños', description: 'Coloridas, personalizables con nombre e iniciales.' },
+    { icon: 'heart', title: 'Cajas para bodas', description: 'Detalles para invitados en madera clara con grabados personalizados.' },
+    { icon: 'cake', title: 'Cajas de cumpleaños', description: 'Diseños únicos con nombre e iniciales talladas.' },
     { icon: 'gift', title: 'Cajas sorpresa', description: 'Con compartimentos para chocolates, notas y pequeños regalos.' },
     { icon: 'flower-2', title: 'Cajas florales', description: 'Diseñadas para acompañar arreglos y ramos.' },
     { icon: 'package', title: 'Cajas corporativas', description: 'Para regalos empresariales y detalles de fin de año.' },

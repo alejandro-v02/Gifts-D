@@ -1,7 +1,7 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { LucideAngularModule, Gift, Heart, Cake, Package, Sparkles, Flower2,
   HandHeart, Truck, Palette, Clock, MessageCircle, Instagram, Facebook, Mail,
-  Menu, X } from 'lucide-angular';
+  Menu, X, Hammer, ChevronLeft, ChevronRight } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -9,7 +9,7 @@ export const appConfig: ApplicationConfig = {
       LucideAngularModule.pick({
         Gift, Heart, Cake, Package, Sparkles, Flower2,
         HandHeart, Truck, Palette, Clock, MessageCircle, Instagram, Facebook, Mail,
-        Menu, X
+        Menu, X, Hammer, ChevronLeft, ChevronRight
       })
     )
   ]
